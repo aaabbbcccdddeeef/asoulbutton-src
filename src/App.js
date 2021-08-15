@@ -16,9 +16,14 @@ function App() {
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [fileTree, setFileTree] = useState(null);
   const {Header, Content, Footer} = Layout;
+  const [audio, setAudio] = useState(new Audio());
 
   const handleMenu = () => {
-    setDrawerVisible((prev) => !prev);
+      setDrawerVisible((prev) => !prev);
+  }
+
+  const replaceAudio = (audioObject) => {
+      setAudio(audioObject);
   }
 
   const renderCards = () => {
@@ -26,7 +31,7 @@ function App() {
         <div style={{minHeight: '720px'}}>
            {
             fileTree ? fileTree.sections.map((section) =>
-              <SectionCard config={section} />
+              <SectionCard config={section} audioPanel={audio} updateAudio={replaceAudio}/>
             ) : <div></div>
            }
         </div>
@@ -55,13 +60,16 @@ function App() {
           <Layout>
               <PageHeader
                   backIcon={<MenuOutlined />}
-                  title="A-soul按钮"
+                  title={<Link to="/"><span style={{color: 'black'}}>A-soul按钮</span></Link>}
                   extra={[
                       <Tooltip placement="bottom" title="罕见模式（暂未开放）" key="language">
                           <Button shape="circle" icon={<TranslationOutlined />} />
                       </Tooltip>,
                       <Tooltip placement="bottom" title="开源仓库" key="github">
-                          <Button shape="circle" icon={<GithubOutlined />} />
+                          <Button shape="circle"
+                                  href="https://github.com/asoulbutton/asoulbutton-src"
+                                  target="_blank"
+                                  icon={<GithubOutlined />} />
                       </Tooltip>
                   ]}
                   onBack={handleMenu}

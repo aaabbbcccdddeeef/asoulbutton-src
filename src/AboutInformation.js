@@ -10,7 +10,8 @@ export default function AboutInformation() {
             <p>灵感来自<a href="https://github.com/LionelChen/imi-button">imi-button</a>项目，按照GPLv3开源。</p>
             <Divider />
             <h3>想要添加音频？</h3>
-            <p>查看asoul-button的Github Pages仓库，
+            <p>查看
+                <a href="https://github.com/asoulbutton/asoulbutton.github.io" target="_blank">asoul-button的Github Pages仓库</a>，
                 音频文件按照assets/directoryName/fileName.*的结构存储，
                 文件地址配置存储在config.json中。
                 如果想要添加一个类别，则在sections数组中添加一个新对象，
@@ -26,7 +27,8 @@ export default function AboutInformation() {
             </p>
             <Divider />
             <h3>想要贡献代码？</h3>
-            <p>查看asoul-button的源代码仓库，所有代码按照GPLv3开源。欢迎star，fork，提issue。</p>
+            <p>查看<a href="https://github.com/asoulbutton/asoulbutton-src" target="_blank">asoul-button的源代码仓库</a>，
+                所有代码按照GPLv3开源。欢迎star，fork，提issue。</p>
         </Card>
     )
 }

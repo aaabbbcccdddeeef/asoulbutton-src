@@ -8,7 +8,13 @@ export default function SectionCard(props) {
             <div style={{display: 'flex'}}>
                 {
                     props.config.audios.map((audio) =>
-                        <SoundButton audioTitle={audio.title} key={audio.title} src={'/assets/' + props.config.directoryName + '/' + audio.src}/>)
+                        <SoundButton
+                            audioTitle={audio.title}
+                            key={audio.title}
+                            src={'/assets/' + props.config.directoryName + '/' + audio.src}
+                            audioPanel={props.audioPanel}
+                            updateAudio={props.updateAudio}
+                        />)
                 }
             </div>
 
