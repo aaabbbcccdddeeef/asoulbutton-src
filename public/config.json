@@ -1,0 +1,32 @@
+{
+  "sections": [
+    {
+      "sectionName": "名场面",
+      "directoryName": "classic",
+      "audios": [
+        {
+          "title": "Test1",
+          "src": "test1.mp3"
+        },
+        {
+          "title": "Test2",
+          "src": "test2.mp3"
+        }
+      ]
+    },
+    {
+      "sectionName": "这下Tom了",
+      "directoryName": "tom",
+      "audios": [
+        {
+          "title": "Test3",
+          "src": "test3.mp3"
+        },
+        {
+          "title": "Test4",
+          "src": "test4.mp3"
+        }
+      ]
+    }
+  ]
+}
